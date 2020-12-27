@@ -13,17 +13,6 @@ on:
 jobs:
   docker-push:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag-schedule:
-          - ""
-          - "cron-{{date 'YYYYMMDD'}}"
-          - "{{date 'YYYYMMDD-HHmmss'}}"
-          - "schedule"
-        tag-latest:
-          - 'true'
-          - 'false'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -31,14 +20,8 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: name/app
-          tag-sha: true
-          tag-semver: |
-            v{{version}}
-            v{{major}}.{{minor}}
-            v{{major}}
-          tag-latest: ${{ matrix.tag-latest }}
-          tag-schedule: ${{ matrix.tag-schedule }}
+          images: nabilmerk/rust-grcov
+          tag-schedule: ${{ date 'YYYYMMDD-HHmmss' }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub
