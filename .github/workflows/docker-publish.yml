@@ -23,8 +23,8 @@ jobs:
           images: nabilmerk/rust-grcov
           tag-sha: true
           tag-semver: |
-            v{{version}}
-            v{{major}}.{{minor}}
+            {{version}}
+            {{major}}.{{minor}}
           tag-schedule: |
             "{{date 'YYYYMMDD'}}"
             "schedule"
