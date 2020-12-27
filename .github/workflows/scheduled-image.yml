@@ -24,7 +24,7 @@ jobs:
         with:
           push: true
           file: stretch/Dockerfile
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/rust-grcov:latest
+          tags: nabilmerk/rust-grcov:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

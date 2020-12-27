@@ -5,7 +5,6 @@ RUN cargo install grcov; \
     rustup component add llvm-tools-preview; \
     apt-get update && apt-get install -yqq python3-pip python3-setuptools lcov; \
     python3 -m pip install wheel; \
-    python3 setup.py bdist_wheel; \
     python3 -m pip install lcov_cobertura; \
     rustup --version; \
     cargo --version; \
