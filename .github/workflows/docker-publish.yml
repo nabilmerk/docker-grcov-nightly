@@ -117,11 +117,11 @@ jobs:
           tags: ${{ steps.docker_meta.outputs.tags }}
       - name: Inspect image
         run: |
-          docker pull ${{ env.DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
-          docker image inspect ${{ env.DOCKER_IMAGE }}:${{ steps.docker_meta.outputs.version }}
+          docker pull nabilmerk/rust-grcov:${{ steps.docker_meta.outputs.version }}
+          docker image inspect nabilmerk/rust-grcov:${{ steps.docker_meta.outputs.version }}
       - name: Check manifest
         run: |
-          docker buildx imagetools inspect ${{ env.IMAGE }}:${{ steps.docker_meta.outputs.version }}
+          docker buildx imagetools inspect nabilmerk/rust-grcov:${{ steps.docker_meta.outputs.version }}
       - name: Dump context
         if: always()
         uses: crazy-max/ghaction-dump-context@v1

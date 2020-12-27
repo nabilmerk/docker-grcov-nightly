@@ -1,5 +1,4 @@
-![Build and publish Docker image](https://github.com/nabilmerk/docker-grcov-nightly/workflows/Build%20and%20publish%20Docker%20image/badge.svg)
-![Scheduled build and publish](https://github.com/nabilmerk/docker-grcov-nightly/workflows/Scheduled%20build%20and%20publish/badge.svg)
+![ci](https://github.com/nabilmerk/docker-grcov-nightly/workflows/ci/badge.svg)
 
 # docker-grcov-nightly
 
