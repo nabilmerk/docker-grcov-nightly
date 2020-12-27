@@ -10,9 +10,6 @@ on:
       - 'v*.*.*'
   pull_request:
 
-env:
-  DOCKER_IMAGE: localhost:5000/nabilmerk/rust-grcov
-
 jobs:
   multi-images:
     runs-on: ubuntu-latest
@@ -22,9 +19,7 @@ jobs:
       - name: Docker meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: |
-            ${{ env.DOCKER_IMAGE }}
-            nabilmerk/rust-grcov
+          images: nabilmerk/rust-grcov
           tag-sha: true
 
   tag-schedule:
@@ -43,9 +38,7 @@ jobs:
       - name: Docker meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: |
-            ${{ env.DOCKER_IMAGE }}
-            nabilmerk/rust-grcov
+          images: nabilmerk/rust-grcov
           tag-sha: true
           tag-schedule: ${{ matrix.tag-schedule }}
 
@@ -67,9 +60,7 @@ jobs:
       - name: Docker meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: |
-            ${{ env.DOCKER_IMAGE }}
-            nabilmerk/rust-grcov
+          images: nabilmerk/rust-grcov
           tag-sha: true
           tag-match: ${{ matrix.tag-match }}
           tag-match-group: ${{ matrix.tag-match-group }}
@@ -89,9 +80,7 @@ jobs:
       - name: Docker meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: |
-            ${{ env.DOCKER_IMAGE }}
-            nabilmerk/rust-grcov
+          images: nabilmerk/rust-grcov
           tag-semver: |
             {{raw}}
             {{version}}
@@ -107,7 +96,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: ${{ env.DOCKER_IMAGE }}
+          images: nabilmerk/rust-grcov
           tag-sha: true
           tag-semver: |
             v{{version}}
