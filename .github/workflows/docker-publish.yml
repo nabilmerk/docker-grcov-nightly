@@ -27,7 +27,6 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: nabilmerk/rust-grcov
-          tag-sha: true
           tag-latest: true
           tag-semver: |
             {{version}}
