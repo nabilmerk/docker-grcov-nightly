@@ -1,6 +1,6 @@
 ![ci](https://github.com/nabilmerk/docker-grcov-nightly/workflows/ci/badge.svg)
 
-# docker-grcov-nightly
+# rust-grcov
 
 Find it on [Docker Hub](https://hub.docker.com/repository/docker/nabilmerk/grcov-nightly).
 
@@ -10,7 +10,11 @@ This image is built with :
 - [Python3](https://www.python.org/),
 - and [lcov-cobertura](https://github.com/eriwen/lcov-to-cobertura-xml) for converting lcov to cobertura format.
 
+# Supported architecture
+
 Right now, there is only linux/debian/stretch with arch x86-64 that is supported.
+
+# Supported tags
 
 Signification for tags are provided:
 - `latest`: build from the last release version of the [repository](https://github.com/nabilmerk/docker-grcov-nightly),
