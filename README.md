@@ -31,11 +31,17 @@ Signification for tags are provided:
 - `nightly` or `YYYYMMDD`: build from scheduled with the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
 
 The table hereafter defines how components are updated:
-| Tag | Rust | grcov | llvm-tools | Python3 | lcov-cobertura |
--|||||||-
-| `latest` <td colspan=5> building date of rust-grcov latest release (rust version is the nightly Rust of the building date)
-| `X.Y` or `X.Y.Z` <td colspan=5> building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date)
-| `nightly` or `YYYYMMDD` | nightly <td colspan=4> last release
+<table>
+<tr><td>Tag</td><td>Rust</td><td>grcov</td><td>llvm-tools</td><td>Python3</td><td>lcov-cobertura</td></tr>
+<tr><td>`latest</td><td colspan=5>building date of rust-grcov latest release (rust version is the nightly Rust of the building date)</td></tr>
+<tr><td>`X.Y` or `X.Y.Z`</td><td colspan=5>building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date)</td></tr>
+<tr><td>`nightly` or `YYYYMMDD`</td><td>nightly</td><td colspan=4>last release</td></tr>
+</table>
+<!---| Tag | Rust | grcov | llvm-tools | Python3 | lcov-cobertura |
+| --- | ---- | ----- | ---------- | ------- | -------------- |
+| `latest` <td colspan=5> building date of rust-grcov latest release (rust version is the nightly Rust of the building date) </td>
+| `X.Y` or `X.Y.Z` <td colspan=5> building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date) </td>
+| `nightly` or `YYYYMMDD` | nightly <td colspan=4> last release </td>--->
 
 
 The scheduled build (`nightly`) is done everyday at 23:00 UTC in order to match the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
