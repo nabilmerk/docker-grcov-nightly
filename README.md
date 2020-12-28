@@ -12,4 +12,8 @@ This image is built with :
 
 The build is done everyday at 23:00 UTC in order to match the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
 
-Right now, there is only AMD64 that is supported.
+Right now, there is only linux/debian/stretch with arch AMD64 that is supported.
+
+Two tags are provided:
+- `latest`: build from the last push/release version on the [repository](https://github.com/nabilmerk/docker-grcov-nightly),
+- `nightly`: build from scheduled with the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
