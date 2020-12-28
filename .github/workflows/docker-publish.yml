@@ -30,6 +30,7 @@ jobs:
           tag-semver: |
             {{version}}
             {{major}}.{{minor}}
+            "nightly"
           tag-schedule: |
             "{{date 'YYYYMMDD'}}"
             "nightly"

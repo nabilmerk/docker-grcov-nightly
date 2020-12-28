@@ -43,5 +43,5 @@ The table hereafter defines how components are updated:
 | `X.Y` or `X.Y.Z` <td colspan=5> building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date) </td>
 | `nightly` or `YYYYMMDD` | nightly <td colspan=4> last release </td>--->
 
-
 The scheduled build (`nightly`) is done everyday at 23:00 UTC in order to match the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
+Also, a release will add `nightly` tag to its build.
