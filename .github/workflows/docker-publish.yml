@@ -4,11 +4,17 @@ on:
   schedule:
     - cron: '00 23 * * *' # everyday at 11pm
   push:
+    paths:
+      - 'stretch/**'
+      - '.github/workflows/**'
     branches:
       - '**'
     tags:
       - 'v*.*.*'
   pull_request:
+    paths:
+      - 'stretch/**'
+      - '.github/workflows/*'
 
 jobs:
   docker:
@@ -22,6 +28,7 @@ jobs:
         with:
           images: nabilmerk/rust-grcov
           tag-sha: true
+          tag-latest: true
           tag-semver: |
             {{version}}
             {{major}}.{{minor}}
