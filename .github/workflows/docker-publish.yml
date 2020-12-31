@@ -4,9 +4,7 @@ on:
   schedule:
     - cron: '00 23 * * *' # everyday at 11pm
   release:
-    paths:
-      - 'stretch/**'
-      - '.github/workflows/**'
+  workflow_dispatch:
 
 jobs:
   docker:
