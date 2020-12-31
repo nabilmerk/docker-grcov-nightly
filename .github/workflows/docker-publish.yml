@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '00 23 * * *' # everyday at 11pm
   release:
+    types:
+      - created
   workflow_dispatch:
 
 jobs:
