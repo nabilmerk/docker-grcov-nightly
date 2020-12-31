@@ -5,7 +5,7 @@ RUN cargo install rustfilt; \
     rustup component add llvm-tools-preview; \
     cargo install cargo-binutils; \
     cargo install grcov; \
-    apt-get update && apt-get install -yqq python3-pip python3-setuptools lcov; \
+    apt-get update && apt-get install -yqq python3-pip python3-setuptools lcov jq; \
     python3 -m pip install wheel; \
     python3 -m pip install lcov_cobertura; \
     rustup --version; \
