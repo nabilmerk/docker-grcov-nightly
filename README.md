@@ -1,4 +1,5 @@
-![ci](https://github.com/nabilmerk/docker-grcov-nightly/workflows/ci/badge.svg)
+![commit](https://github.com/nabilmerk/docker-grcov-nightly/workflows/push/badge.svg)
+![published](https://github.com/nabilmerk/docker-grcov-nightly/workflows/publish/badge.svg)
 
 # rust-grcov
 
