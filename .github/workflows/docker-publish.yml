@@ -23,9 +23,6 @@ jobs:
             {{version}}
             {{major}}.{{minor}}
             "nightly"
-          tag-schedule: |
-            "{{date 'YYYYMMDD'}}"
-            "nightly"
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub

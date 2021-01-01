@@ -29,20 +29,20 @@ Right now, there is only linux/debian/stretch with arch x86-64 that is supported
 Signification for tags are provided:
 - `latest`: build from the last release version of the [repository](https://github.com/nabilmerk/docker-grcov-nightly),
 - `X.Y` or `X.Y.Z`: build from the release `X.Y` or `X.Y.Z` version of the [repository](https://github.com/nabilmerk/docker-grcov-nightly),
-- `nightly` or `YYYYMMDD`: build from scheduled with the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
+- `nightly`: build from scheduled with the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
 
 The table hereafter defines how components are updated:
 <table>
 <tr><td>Tag</td><td>Rust</td><td>grcov</td><td>llvm-tools</td><td>Python3</td><td>lcov-cobertura</td></tr>
 <tr><td>`latest</td><td colspan=5>building date of rust-grcov latest release (rust version is the nightly Rust of the building date)</td></tr>
 <tr><td>`X.Y` or `X.Y.Z`</td><td colspan=5>building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date)</td></tr>
-<tr><td>`nightly` or `YYYYMMDD`</td><td>nightly</td><td colspan=4>last release</td></tr>
+<tr><td>`nightly`</td><td>nightly</td><td colspan=4>last release</td></tr>
 </table>
 <!---| Tag | Rust | grcov | llvm-tools | Python3 | lcov-cobertura |
 | --- | ---- | ----- | ---------- | ------- | -------------- |
 | `latest` <td colspan=5> building date of rust-grcov latest release (rust version is the nightly Rust of the building date) </td>
 | `X.Y` or `X.Y.Z` <td colspan=5> building date of rust-grcov `X.Y` or `X.Y.Z` release (rust version is the nightly Rust of the building date) </td>
-| `nightly` or `YYYYMMDD` | nightly <td colspan=4> last release </td>--->
+| `nightly` | nightly <td colspan=4> last release </td>--->
 
 The scheduled build (`nightly`) is done everyday at 23:00 UTC in order to match the last release of [nightly Rust](https://hub.docker.com/r/rustlang/rust).
 Also, a release will add `nightly` tag to its build.
