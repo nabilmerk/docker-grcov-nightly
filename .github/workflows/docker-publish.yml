@@ -47,7 +47,7 @@ jobs:
         if: always()
         uses: crazy-max/ghaction-dump-context@v1
       - name: Update repo description
-        uses: peter-evans/dockerhub-description@v2
+        uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
